@@ -51,7 +51,7 @@ void Bin_Example()
 			pixels[i][j] = 1 + i*j;
 		
 	output_matrix(pixels,3,3);
-	ofstream fout("data.bin",ios::binary); // ofstream is defined in <fstream>
+	ofstream fout("data.txt",ios::binary); // ofstream is defined in <fstream>
 	// you can give any extension
 	for(int i = 0 ; i < 3; i++)
 		for(int j = 0;j < 3; j++)
@@ -71,7 +71,7 @@ void Bin_Example()
 		output_matrix(pixels,3,3);
 	fout.close();
 	cout<<"Reading again..."<<endl;
-	ifstream fin("data.bin",ios::binary);
+	ifstream fin("data.txt",ios::binary);
 	// you can give any extension
 	if(!fin)  
 	// if(fin.fail()) alternative
